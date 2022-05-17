@@ -1,0 +1,36 @@
+﻿@using web_sales_project.Models
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - NextShop</title>
+    @Styles.Render("~/styles")
+</head>
+<body>
+
+<div class="App">
+    <div class="header">
+        <div class="header__title">
+            NextShop
+        </div>
+        <div class="header__subtitle">
+            An All-Purpose Webshop
+        </div>
+        <div class="header__menu">
+            @Html.ActionLink("Create Sale","Create", "SalesItem")
+            @Html.ActionLink("View Sales", "Index", "SalesItem")
+            @Html.ActionLink("About", "About", "Home")
+        </div>
+    </div>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <div class="footer"></div>
+</div>
+
+
+@Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+</body>
+</html>

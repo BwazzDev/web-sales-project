@@ -1,0 +1,44 @@
+﻿@model web_sales_project.Models.SalesItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="si-details">
+    <div class="si-details__img">
+        <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="">
+    </div>
+    <div class="si-details__details">
+        <div class="si-details__details__name">
+            @Html.DisplayFor(model => model.Name)
+        </div>
+        <div class="si-details__details__category">
+            @Html.DisplayFor(model => model.SalesCategory)
+        </div>
+
+        <div class="si-details__details__price">
+            Price:
+            @Html.DisplayFor(model => model.Price)
+        </div>
+
+        <div class="si-details__details__quantity">
+            @Html.DisplayFor(model => model.Quantity) in stock
+        </div>
+
+        <div class="si-details__details__listing-time">
+            Listing date:
+            @Html.DisplayFor(model => model.ListingTimeStamp)
+        </div>
+
+        <div class="si-details__details__description">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+
+        <div class="si-details__details__seller">
+            Seller ID: @Html.DisplayFor(model => model.SellerId)
+
+        </div>
+
+        <button>Buy Now</button>
+    </div>
+</div>

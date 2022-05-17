@@ -1,0 +1,47 @@
+﻿.search-form {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-items: center;
+  justify-content: end;
+  background-color: $color-gs-2;
+  padding: .7rem;
+  grid-gap: 0;
+  font-size: 0;
+
+  &__label {
+    font-size: 2rem;
+    padding-right: 1rem;
+    
+  }
+
+  &__text-box {
+    display: block;
+    outline: none;
+    border: none;
+
+    height: 3.2rem;
+    padding: .5rem 1rem;
+    
+    background-color: $color-gs-3;
+    font-size: 1.8rem;
+    color: $color-ct-0;
+
+  }
+
+  &__submit {
+    display: block;
+    outline: none;
+    border: none;
+    
+    height: 3.2rem;
+    padding: 0 2rem;
+    
+    background-color: $color-2;
+    color: $color-ct-1;
+
+    &:hover {
+      background-color: $color-1;
+      color: $color-gs-2;
+    }
+  }
+}

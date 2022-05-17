@@ -1,0 +1,23 @@
+﻿@model IEnumerable<web_sales_project.Models.SalesItem>
+
+@{
+    ViewBag.Title = "Sales";
+}
+
+
+@using (Html.BeginForm())
+{
+    <div class="search-form">
+        <span class="search-form__label">Filter by name</span>
+        @Html.TextBox("SearchString", null, new { @class = "search-form__text-box" })
+        <input class="search-form__submit" type="submit" value="Search"/>
+    </div>
+}
+
+
+<div class="sales-items">
+    @foreach (var item in Model)
+    {
+        @Html.Partial("_SalesItem", item)
+    }
+</div>

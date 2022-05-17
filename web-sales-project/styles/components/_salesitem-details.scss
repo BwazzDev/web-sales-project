@@ -1,0 +1,79 @@
+﻿.si-details {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+
+  &__img {
+    background-color: #fff;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: 50vh;
+      padding: 1rem;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+  }
+  
+  &__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+    &__name {
+      grid-column: 1 / span 3;
+
+      justify-self: center;
+      align-self: center;
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    &__price {
+      grid-column: 1 / span 1;
+
+    }
+
+    &__quantity {
+      grid-column: 2 / span 1;
+    }
+
+    &__description {
+      grid-column: 1 / span 3;
+      padding: 0 1rem;
+    }
+
+    &__seller {
+      grid-column: 1 / span 3;
+    }
+
+    &__category {
+      grid-column: 1 / span 3;
+    }
+
+    button {
+      grid-column: 1 / span 3;
+      
+      width: 60%;
+      height: 5rem;
+
+      background-color: $color-2;
+      outline: none;
+      border: none;
+
+      color: $color-ct-2;
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-1;
+        color: $color-gs-5;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.App {
+  max-width: 120rem;
+  margin: 4rem auto;
+  display: grid;
+  justify-items: center;
+}
+
+.header {
+  width: 100%;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  align-items: center;
+
+  &__title {
+    grid-column: 1 / span 1;
+
+    font-family: $font-title;
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+
+  &__subtitle {
+    grid-column: 1 / span 1;
+
+    font-family: $font-title;
+    font-size: 1.6rem;
+    line-height: 1;
+    justify-self: start;
+    padding-left: 5rem;
+    padding-bottom: 1rem;
+  }
+
+  &__menu {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+
+    justify-self: end;
+    align-self: end;
+    
+    display: flex;
+    flex-direction: row;
+    
+    a {
+      border: none;
+      outline: none;
+      padding: 1rem 2rem;
+      background: $color-2;
+      color: $color-ct-2;
+
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:nth-child(1){
+        border-radius: 1rem 0 0 0;
+      }
+
+      &:nth-last-child(1){
+        border-radius: 0 1rem 0 0;
+      }
+      
+      &:active, &:hover{
+        background: $color-1;
+        color: $color-gs-1;
+      }
+    }
+  }
+}
+
+.content {
+  background: $color-gs-4;
+  width: 100%;
+}
+
+.footer {
+
+}
